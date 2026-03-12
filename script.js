@@ -4,19 +4,23 @@ const todoInput = document.getElementById("todoInput");
 
 function addTodoEntry() {
   const todoEntry = document.createElement("li");
+  const todoText = document.createElement("span");
   const deleteEntry = document.createElement("button");
 
   deleteEntry.textContent = "X";
-  deleteEntry.setAttribute("id", "delBtn");
+  deleteEntry.setAttribute("class", "delBtn");
+  deleteEntry.setAttribute("aria-label", "Aufgabe löschen");
+  deleteEntry.setAttribute("title", "Aufgabe löschen");
 
   deleteEntry.addEventListener("click", function () {
     todoEntry.remove();
   });
 
   if (todoInput.value.trim() !== "") {
-    todoEntry.textContent = todoInput.value.trim();
+    todoText.textContent = todoInput.value.trim();
     todoEntry.appendChild(deleteEntry);
     todoList.appendChild(todoEntry);
+    todoEntry.appendChild(todoText);
 
     todoInput.value = "";
     todoInput.focus();

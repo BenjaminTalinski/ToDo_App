@@ -11,3 +11,13 @@
   width: 350px;
   height: auto;
 }
+
+.delBtn {
+  cursor: pointer;
+  color: red;
+  background: transparent;
+  font-weight: 900;
+  border: 0;
+  padding: 0;
+  margin: 5px;
+}
