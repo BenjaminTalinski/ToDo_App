@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+#addBtn {
+  width: 100px;
+}
+
+#todoInput {
+  width: 350px;
+  height: auto;
+}
